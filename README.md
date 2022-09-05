@@ -51,7 +51,7 @@ Shift: SELECT
         * MBC1M support is undefined. I haven't implemented anything in the code for it in particular since I don't know how it works, but from [what I can find](https://niwanetwork.org/wiki/MBC1_(Game_Boy_mapper)), the difference between MBC1 and MBC1M is entirely in wiring and not via a different chip so it may work in theory. If you want to run a multi-game compilation with guaranteed success, make it MMM01 (see [planned features](#planned-features-in-order-of-when-i-will-implement-them)) rather than MBC1M.
     * [MBC2](https://gbhwdb.gekkio.fi/cartridges/mbc2.html)
     * [MBC5](https://gbhwdb.gekkio.fi/cartridges/mbc5.html)
-* RAM viewer
+* Debugger
 
 ## Planned features, in order of when I will implement them
 * DMG-style display
