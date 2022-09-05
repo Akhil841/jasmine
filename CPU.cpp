@@ -243,6 +243,8 @@ void CPU::step()
             {
                 //clear interrupt flag
                 set &= ~(1 << i);
+                //write to iflags
+                mmu.w8(set, 0xFF0F);
                 //write current pc to sp
                 mmu.w8(pc >> 8, sp - 1);
                 mmu.w8(pc & 0xFF, sp - 2);
