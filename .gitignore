@@ -1,0 +1,4 @@
+# ROM files (sharing these is illegal)
+*.gb
+# Binaries (this repo is for source code)
+jasmine
