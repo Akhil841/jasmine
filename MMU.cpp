@@ -294,7 +294,7 @@ unsigned char MMU::r8(unsigned short location)
 
 unsigned short MMU::r16(unsigned short location)
 {
-    return r8(location) + short(r8(location+1) << 8);
+    return r8(location) + (r8(location+1) << 8);
 }
 
 void MMU::w8(unsigned char value, unsigned short location)
@@ -625,5 +625,5 @@ void MMU::w16(unsigned short value, unsigned short location)
     //write lower 8 bits to the address
     w8(location, value & 0xFF);
     //write upper 8 bits to the next address
-    w8(location+1, value >> 8);
+    w8(location+1, (value >> 8));
 }
