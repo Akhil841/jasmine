@@ -46,8 +46,6 @@ Enter: START
 Shift: SELECT
 
 ## Current features
-* DMG-style display
-* Keyboard input supported
 * Support for the following memory mappers (the links tell you which Game Boy games use which memory mappers):
     * [MBC1](https://gbhwdb.gekkio.fi/cartridges/mbc1.html)
         * MBC1M support is undefined. I haven't implemented anything in the code for it in particular since I don't know how it works, but from [what I can find](https://niwanetwork.org/wiki/MBC1_(Game_Boy_mapper)), the difference between MBC1 and MBC1M is entirely in wiring and not via a different chip so it may work in theory. If you want to run a multi-game compilation with guaranteed success, make it MMM01 (see [planned features](#planned-features-in-order-of-when-i-will-implement-them)) rather than MBC1M.
@@ -55,6 +53,8 @@ Shift: SELECT
     * [MBC5](https://gbhwdb.gekkio.fi/cartridges/mbc5.html)
 
 ## Planned features, in order of when I will implement them
+* DMG-style display
+* Keyboard input
 * [MBC3](https://gbhwdb.gekkio.fi/cartridges/mbc3.html) support. Many of my favorite GB games use an MBC3, so this is a must for me. Also, the implementation of an RTC sounds kind of fun.
 * RAM viewer. Never gonna use it, but seeing decoded assembly will never lose its charm to me.
 * Sound because duh
