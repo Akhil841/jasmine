@@ -212,7 +212,7 @@ void PPU::push_pixel()
         FIFOpage* out = fifo.pop();
         unsigned int data = out->val;
         delete out;
-        if (line_x >= )
+        // if (line_x >= )
     }
 }
 
@@ -225,5 +225,5 @@ void PPU::pipeline_process()
     {
         //fifo.fetch();
     }
-    fifo.push_pixel();
+    // fifo.push_pixel();
 }

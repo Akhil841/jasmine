@@ -1,5 +1,5 @@
 BIOS=tools/makebios.cpp
-BIOSFLAGS="-o makebios"
+BIOSFLAGS="-std=c++17 -o makebios"
 
 # Compile the BIOS making program
 g++ $BIOS $BIOSFLAGS

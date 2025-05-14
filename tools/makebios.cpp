@@ -1,5 +1,7 @@
 #include <fstream>
 #include <iostream>
+#include <string>
+#include <filesystem>
 
 int
 main()
@@ -132,7 +134,8 @@ main()
         0x3E, 0x01, 
         0xE0, 0x50
     };
-    std::ofstream makebios("bios/bios.gb", std::ios::out | std::ios::binary);
+    std::filesystem::create_directories("bios");
+    std::ofstream makebios(std::string("bios/bios.gb"), std::ios::out | std::ios::binary);
     for (int i = 0; i < 256; i++)
         makebios << bios[i];
     std::cout << "BIOS writing finished!" << std::endl;

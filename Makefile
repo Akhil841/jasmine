@@ -3,7 +3,7 @@ ROM = test/tetris.gb
 
 #Compilation parameters
 FILES = main.cpp CPU.cpp MMU.cpp operations.cpp cpuexec.cpp window.cpp PPU.cpp timers.cpp 
-FLAGS = -o jasmine -lSDL2 -lSDL2main
+FLAGS = -std=c++17 -o jasmine -lSDL2 -lSDL2main
 WFLAGS = -I. -ggdb -Wall -Wextra -Werror
 
 all:
@@ -21,4 +21,4 @@ clean:
 
 clear:
 	rm -f jasmine
-	clear
+	clean
