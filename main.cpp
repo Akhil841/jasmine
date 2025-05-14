@@ -18,14 +18,14 @@ int main(int argc, char** argv)
     Timers timers(&cpu);
     ui_init();
     unsigned int prevframe = 0;
-    //bool fuse = true;
+    bool fuse = true;
     while (cpu.pc < 0xA00 && !cpu.die)
     {
         // bios "jailbreaks"
-        // if (cpu.pc == 0x66 && fuse)
-        //     cpu.a = 0x90;
-        // if (cpu.pc == 0x8C && fuse)
-        //     cpu.f |= 0x80;
+        if (cpu.pc == 0x66 && fuse)
+            cpu.a = 0x90;
+        if (cpu.pc == 0x8C && fuse)
+            cpu.f |= 0x80;
         if (cpu.pc == 0x100)
         {
             cpu.mmu.load_rom(filepath);
@@ -41,6 +41,12 @@ int main(int argc, char** argv)
             //ui_update(&ppu);
         }
         prevframe = ppu.currentframe;
+        // wait for user to press enter
+        // char quit = std::cin.get();
+        // if (quit == 'q' || quit == 'Q')
+        // {
+        //     break;
+        // }
     }
     return 0;
 }
